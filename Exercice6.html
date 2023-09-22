@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice JS</title>
+</head>
+
+<body>
+    <h1>Nombre aléatoire</h1>
+
+    <script>
+
+
+        var Nombre_Aléatoire = Math.floor(Math.random() * 10);
+        console.log(Nombre_Aléatoire);
+        var Nbr_proposé = Number(prompt("Entrez le nombre à trouver"));
+        var c = 1
+
+        while (Nombre_Aléatoire != Nbr_proposé) {
+            Nbr_proposé = Number(prompt("Entrez le nombre à trouver"));
+            c++
+        }
+        console.log('vous avez trouvez le numero aprés ', c, 'fois');
+    </script>
+</body>
+
+</html>

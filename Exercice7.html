@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice JS</title>
+</head>
+
+<body>
+    <h1>Objet en chaîne de caractères</h1>
+
+    <script>
+        function member(id, name, grade) {
+            this.identifiant = id;
+            this.nom = name;
+            this.grade = grade;
+            this.toString = function () {
+                return "identifiant: " + this.identifiant + " name: " + this.nom + " grade: " + this.grade;
+            }
+        }
+        function team() {
+            this.members = new Array();
+            this.add = function (member) {
+                let i = this.members.length
+                this.members[i] = member
+            };
+            this.toString = function () {
+                return this.members.toString()
+            }
+        }
+        var team1 = new team()
+        team1.add(new member(1, 'mohamed', 'developpeur'))
+        console.log(team1.toString());
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice JS</title>
+</head>
+
+<body>
+    <h1>Calculateur de salaire</h1>
+
+    <script>
+
+
+
+        var SBrut = Number(prompt('Donnez le salaire brut'));
+        var travailleur = prompt('Donner le sexe');
+        var PersEnChrg = Number(prompt('combien de personnes en charge?'));
+        var Impot = 0.18;
+        var assurance = 0.07;
+        var PensionCA = 0.05;
+        var femme;
+
+        var bonus = 150;
+        var allocation = 100;
+        if (travailleur == femme) {
+            Impot -= 0.02;
+        }
+
+        if (PersEnChrg == 3) {
+            Impot -= 0.01;
+        }
+        else if (PersEnChrg >= 4) {
+            Impot -= 0.02;
+        }
+
+
+        var SNet = SBrut - ((Impot * SBrut) + (assurance * SBrut) + (PensionCA * SBrut));
+        var SNetBonus = SNet + bonus;
+        var SNetAllocation = SNet + allocation;
+        console.log("Le Salaire Net Est De: " + SNet + ' $ ' +
+            '\nLe Salaire Net Avec Bonus: ' + SNetBonus + ' $ ' +
+            '\nLe Salaire Net Avec Allocation: ' + SNetAllocation + ' $ ');
+    </script>
+</body>
+
+</html>
